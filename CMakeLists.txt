@@ -32,8 +32,8 @@ if (MSVC)
 endif ()
 
 add_executable(physics
-        main.cpp World.cpp Ball.cpp Physics.cpp Color.cpp Painter.cpp
-        black_box/Application.cpp black_box/View.cpp black_box/PainterImpl.cpp)
+        main.cpp World.cpp World.hpp Ball.cpp Ball.hpp Physics.cpp Physics.hpp Color.cpp Color.hpp 
+        Painter.cpp Painter.hpp black_box/Application.cpp black_box/View.cpp black_box/PainterImpl.cpp)
 target_link_libraries(physics PRIVATE sfml-graphics)
 
 target_compile_options(physics PRIVATE

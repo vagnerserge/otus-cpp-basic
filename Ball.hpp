@@ -13,17 +13,17 @@ public:
     _mass( m )
   {};
 
-  void setVelocity( const Velocity & velocity );
+  void     setVelocity( const Velocity & velocity );
   Velocity getVelocity() const;
-  void draw( Painter & painter ) const;
-  void setCenter( const Point & center );
-  Point getCenter() const;
-  double getRadius() const;
-  double getMass() const;
+  void     draw( Painter & painter ) const;
+  void     setCenter( const Point & center );
+  Point    getCenter() const;
+  double   getRadius() const;
+  double   getMass() const;
 private:
   Velocity _velosity;
-  Point  _center;
-  double _radius;
-  Color _color;
-  double _mass;
+  Point    _center;
+  double   _radius;
+  Color    _color;
+  double   _mass;
 };
