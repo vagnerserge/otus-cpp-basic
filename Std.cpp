@@ -1,6 +1,6 @@
 #include"Std.h"
 
-double StdValue::eval() {
+double StdValue::Evaluate() {
 	size_t size = _data.size();
 	double m_step_sum = 0;
 

@@ -1,6 +1,6 @@
 #include "Mean.h"
 
-void MeanValue::update( double next ) {
+void MeanValue::Update( double next ) {
 	if ( _count == 0 ) {
 		_sum = next;
 		_mean = _sum;
