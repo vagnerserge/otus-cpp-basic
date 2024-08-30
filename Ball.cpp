@@ -6,14 +6,14 @@
  * @param velocity новое значение скорости
  */
 void Ball::setVelocity(const Velocity& velocity) {
-  _velosity = velocity;
+  _velocity = velocity;
 }
 
 /**
  * @return скорость объекта
  */
 Velocity Ball::getVelocity() const {
-    return _velosity;
+    return _velocity;
 }
 
 /**

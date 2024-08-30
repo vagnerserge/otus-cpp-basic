@@ -6,7 +6,7 @@
 class Ball {
 public:
   Ball( Velocity v, Point cen, double r, Color col, double m = 1. ) :
-    _velosity( v ),
+    _velocity( v ),
     _center( cen ),
     _radius( r ),
     _color( col ),
@@ -21,7 +21,7 @@ public:
   double   getRadius() const;
   double   getMass() const;
 private:
-  Velocity _velosity;
+  Velocity _velocity;
   Point    _center;
   double   _radius;
   Color    _color;

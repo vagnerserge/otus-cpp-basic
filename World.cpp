@@ -62,7 +62,7 @@ World::World(const std::string& worldFilePath) {
 
         double mass = M_PI * pow( radius, 3 ) * 4.0 / 3.0;
 
-        Ball ball( Velocity( vx, vy ), Point( x, y ), radius, Color( red ,green,blue), mass );
+        Ball ball( Velocity( Point(vx, vy) ), Point( x, y ), radius, Color( red ,green,blue), mass );
         balls.push_back(ball);
     }
 }
