@@ -1,4 +1,5 @@
-﻿build
-data
+﻿Build
+out
+googletest
 .vs
-.vscode
+high_scores.txt
