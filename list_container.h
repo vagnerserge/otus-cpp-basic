@@ -12,7 +12,15 @@ public:
 	};
 
 	ListContainer() : m_last{ nullptr }, m_size{ 0 } {}
-	 
+	~ListContainer() {
+		Node * current = m_last;
+		while ( current != nullptr ) {
+			Node * prev = current->prev;
+			delete current;  // Удаляем текущий узел
+			current = prev;   // Переходим к предыдущему узлу
+		}
+	}
+
 	void push_back( const T & value ) {
  		Node * new_node = new Node{}; // создание нового узла
 		new_node->prev = m_last; // предыдущим элементом станет последний
@@ -47,9 +55,9 @@ public:
 	};
 
 
-	bool erase( int pos )
+	bool erase( size_t pos )
 	{
-		int arrayInd = pos - 1;
+		size_t arrayInd = pos;
 
 		if ( arrayInd >= m_size || arrayInd < 0 )
 		{

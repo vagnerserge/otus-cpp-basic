@@ -6,6 +6,7 @@ class VectorContainer
 {
 public:
 	VectorContainer() : m_region{nullptr},m_size{ 0 } {}
+	~VectorContainer() { delete[] m_region; }
 
 	void push_back( const T & value ) {
 		T * new_region = new T[m_size + 1]; // новая область памяти
@@ -22,10 +23,10 @@ public:
 	  return m_region[ind];
 	};
 
-	bool erase( int pos )
+	bool erase( size_t pos )
 	{
 		
-		int arrayInd = pos - 1;
+		size_t arrayInd = pos;
 		if ( arrayInd >= m_size || arrayInd < 0 )
 		{
 			// invalid position
